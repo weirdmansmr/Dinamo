@@ -4,12 +4,14 @@ for (i = 5; i > 0; i--) {
     slideList.insertAdjacentHTML(
         "afterbegin", 
         `
-        <li> 
-			<div class="slide">
-				<div class="slide_text">
-					<h3>Text ${i} proba pera zagolovka</h3>
+        <li>
+			<a href='#'> 
+				<div class="slide">
+					<div class="slide_text">
+						<h3>Text ${i} proba pera zagolovka</h3>
+					</div>
 				</div>
-			</div> 
+			</a> 
 		</li>
         `
     )

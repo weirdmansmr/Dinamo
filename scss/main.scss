@@ -16,7 +16,7 @@
     transform: translateY(-50%);
     transition: all 150ms ease;
     &:hover {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: #095aa19a;
         text-shadow: 0;
     }
 }
@@ -59,7 +59,7 @@
     background-size: cover;
     background-position: 50% 20%;
     .slide_text {
-        background-color: rgba(9, 90, 161, 0.8);
+        background-color: #095aa1cc;
         height: 300px;
         width: 1000px;
         font-size: 3rem;
@@ -74,6 +74,32 @@
         h3 {
             color: #ffffff;
             margin: 0 50px;
+        }
+    }
+}
+
+.gallery {
+    margin: 0 0 100px 0;
+    h2 {
+        font-size: 2rem;
+        font-family: monospace;
+        color: #0959a1;
+        text-align: center;
+        margin: 40px 0;
+    }
+    .photos {
+        display: grid;
+        justify-items: center;
+        gap: 20px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        img {
+            border-radius: 10px;
+            width: 500px;
+            transition: .2s;
+            &:hover {
+                transform: scale(1.05, 1.05);
+            }
         }
     }
 }
