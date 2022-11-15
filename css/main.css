@@ -157,14 +157,41 @@ footer p {
   display: grid;
   justify-items: center;
   gap: 20px;
+  position: relative;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
-.gallery .photos img {
+.gallery .photos .gall_img {
   border-radius: 10px;
   width: 500px;
+  height: 300px;
   transition: 0.2s;
+  position: relative;
 }
-.gallery .photos img:hover {
+.gallery .photos .img_text {
+  margin: 0;
+  height: 300px;
+  width: 500px;
+  background-color: rgba(9, 90, 161, 0.3215686275);
+  border-radius: 10px;
+  position: absolute;
+  transition: 0.2s;
+  opacity: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .photos .img_text:hover {
+  opacity: 1;
   transform: scale(1.05, 1.05);
+}
+.gallery .photos .img_text:hover + .gall_img {
+  transform: scale(1.05, 1.05);
+}
+.gallery .photos .img_text p {
+  color: #ffffff;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
